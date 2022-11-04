@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block head%}
+
+<title>SEARCH PAGE</title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css') }}">
+
+{% endblock %}
+{% block body %}
+
+<div class="content">
+    <h1 style="text-align:center">Price Prediction</h1>
+
+    <div class ='form'>
+        <form action="/predict" method="POST">
+            <input type="number" name="RM" id="RM" placeholder="RM">
+            <input type="number" name="LSAT" id="LSAT" placeholder="LSAT">
+            <input type="submit" value="predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
